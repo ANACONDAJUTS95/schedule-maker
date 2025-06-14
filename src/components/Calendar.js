@@ -30,10 +30,6 @@ const Calendar = ({ schedule, scheduleMonth }) => {
     <div className="calendar-container">
       <div className="calendar">
         <div className="header">
-          {/* <div className="view-switcher">
-            <button className="view-btn">Day</button>
-            <button className="view-btn active">Month</button>
-          </div> */}
           <div className="date-nav">
             <button onClick={prevMonth} className="nav-btn">
               <FaChevronLeft />
@@ -43,19 +39,36 @@ const Calendar = ({ schedule, scheduleMonth }) => {
               <FaChevronRight />
             </button>
           </div>
-          {/* <div className="filters">
-            <button className="filter-btn">Brand</button>
-            <button className="filter-btn">Influencer</button>
-          </div> */}
         </div>
         <div className="days-of-week">
-          <div>SUN</div>
-          <div>MON</div>
-          <div>TUE</div>
-          <div>WED</div>
-          <div>THU</div>
-          <div>FRI</div>
-          <div>SAT</div>
+          <div>
+            <span className="full-day">SUN</span>
+            <span className="short-day">S</span>
+          </div>
+          <div>
+            <span className="full-day">MON</span>
+            <span className="short-day">M</span>
+          </div>
+          <div>
+            <span className="full-day">TUE</span>
+            <span className="short-day">T</span>
+          </div>
+          <div>
+            <span className="full-day">WED</span>
+            <span className="short-day">W</span>
+          </div>
+          <div>
+            <span className="full-day">THU</span>
+            <span className="short-day">T</span>
+          </div>
+          <div>
+            <span className="full-day">FRI</span>
+            <span className="short-day">F</span>
+          </div>
+          <div>
+            <span className="full-day">SAT</span>
+            <span className="short-day">S</span>
+          </div>
         </div>
         <div className="days-grid">
           {days.map((day) => {
