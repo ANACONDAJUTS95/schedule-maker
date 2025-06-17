@@ -10,6 +10,14 @@
     'Helvetica Neue', Arial, sans-serif;
 }
 
+[data-theme="dark"] {
+  --background-color: #1c1c1e;
+  --container-background: #2c2c2e;
+  --text-color: #f2f2f7;
+  --secondary-text-color: #8e8e93;
+  --border-color: #38383a;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -18,7 +26,7 @@ body {
 }
 
 .App {
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .App h1 {
@@ -31,8 +39,18 @@ body {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 5px;
+}
+
+.mode-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 /* No default styles */

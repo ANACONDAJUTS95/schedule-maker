@@ -78,33 +78,33 @@ const Calendar = ({ schedule, scheduleMonth }) => {
             let daySchedule = null;
             if (currentMonthName === scheduleMonth) {
               daySchedule = schedule.find(
-                (item) => item.dayOfTheMonth == dayNumber
+                (item) => item.dayOfTheMonth === Number(dayNumber)
               );
             }
 
             const scheduleItems = [];
             if (daySchedule && isSameMonth(day, monthStart)) {
-              if (daySchedule.mainNurseAssistant) {
-                scheduleItems.push({
-                  time: "10:00 AM",
-                  title: daySchedule.mainNurseAssistant,
-                  subtitle: "Main Shift",
-                  color: "blue",
-                });
-              }
-              if (daySchedule.morningNurseAssistant) {
+              if (daySchedule.morningMidWifeInCharge) {
                 scheduleItems.push({
                   time: "08:00 AM",
-                  title: daySchedule.morningNurseAssistant,
-                  subtitle: "Morning Shift",
+                  title: daySchedule.morningMidWifeInCharge,
+                  subtitle: "Morning InCharge",
                   color: "green",
                 });
               }
-              if (daySchedule.eveningNurseAssistant) {
+              if (daySchedule.midWifeOnLeave) {
+                scheduleItems.push({
+                  time: "10:00 AM",
+                  title: daySchedule.midWifeOnLeave,
+                  subtitle: "MidWife On Leave",
+                  color: "blue",
+                });
+              }
+              if (daySchedule.eveningMidWifeInCharge) {
                 scheduleItems.push({
                   time: "06:00 PM",
-                  title: daySchedule.eveningNurseAssistant,
-                  subtitle: "Evening Shift",
+                  title: daySchedule.eveningMidWifeInCharge,
+                  subtitle: "Evening InCharge",
                   color: "red",
                 });
               }

@@ -162,13 +162,12 @@
 
 .card-subtitle {
   font-size: 0.8em;
-  color: #0052cc; /* Darker blue for subtitle for better contrast */
   opacity: 0.9;
 }
 
-.card-blue { border-color: #007aff; background-color: #f0f7ff;}
-.card-green { border-color: #34c759; background-color: #f0fff4;}
-.card-red { border-color: #ff3b30; background-color: #fff0f0;}
+.card-blue { border-color: #007aff; background-color: #f0f7ff; color: #007aff;}
+.card-green { border-color: #34c759; background-color: #f0fff4; color: #34c759;}
+.card-red { border-color: #ff3b30; background-color: #fff0f0; color: #ff3b30;}
 
 /* Responsive Styles */
 .short-day {
